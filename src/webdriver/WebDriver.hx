@@ -3,6 +3,9 @@ package webdriver;
 using tink.CoreApi;
 
 @:remove
+extern class WindowHandle {}
+
+@:remove
 extern interface WebDriver {
 
   //function setFileDetector(detector: FileDetector): Void;
@@ -24,5 +27,13 @@ extern interface WebDriver {
   function isElementPresent(locator:Locator): Promise<Bool>;
   function findElements(locator:Locator): Promise<Array<WebElement>>;
   function takeScreenshot(): Promise<String>;
+  function switchTo(): SwitchTo;
+  function getAllWindowHandles(): Promise<Array<WindowHandle>>;
+  function wait(cond:Dynamic): Promise<Dynamic>;
 
+}
+
+@:remove
+extern interface SwitchTo {
+  function window( win: WindowHandle ): Promise<Noise>;
 }
