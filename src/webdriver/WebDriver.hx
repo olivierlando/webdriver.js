@@ -30,6 +30,7 @@ extern interface WebDriver {
   function switchTo(): SwitchTo;
   function getAllWindowHandles(): Promise<Array<WindowHandle>>;
   function wait(cond:Dynamic): Promise<Dynamic>;
+  function getSession(): Promise<Session>;
 
 }
 
