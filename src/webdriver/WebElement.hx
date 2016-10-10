@@ -6,30 +6,30 @@ extern class WebElement {
   function getDriver(): WebDriver;
   function findElement(locator:Locator): WebElementPromise;
 
-  function isElementPresent(locator: Locator): Promise<Bool>;
+  function isElementPresent(locator: Locator): webdriver.Promise<Bool>;
 
-  function findElements(locator: Locator): Promise<Array<WebElement>>;
-  function click(): Promise<Noise>;
-  function getTagName(): Promise<String>;
+  function findElements(locator: Locator): webdriver.Promise<Array<WebElement>>;
+  function click(): webdriver.Promise<Noise>;
+  function getTagName(): webdriver.Promise<String>;
 
-  function sendKeys(keys:haxe.extern.Rest<String>):Promise<Noise>;
-  function getCssValue(cssStyleProperty: String): Promise<String>;
-  function getAttribute(attributeName: String): Promise<String>;
+  function sendKeys(keys:haxe.extern.Rest<String>): webdriver.Promise<Noise>;
+  function getCssValue(cssStyleProperty: String): webdriver.Promise<String>;
+  function getAttribute(attributeName: String): webdriver.Promise<String>;
 
-  function getText(): Promise<String>;
-  function getSize(): Promise<{ w:Float, h: Float }>;
-  function getLocation(): Promise<{ x:Float, y: Float}>;
-  function isEnabled(): Promise<Bool>;
-  function isSelected(): Promise<Bool>;
+  function getText(): webdriver.Promise<String>;
+  function getSize(): webdriver.Promise<{ w:Float, h: Float }>;
+  function getLocation(): webdriver.Promise<{ x:Float, y: Float}>;
+  function isEnabled(): webdriver.Promise<Bool>;
+  function isSelected(): webdriver.Promise<Bool>;
 
-  function submit(): Promise<Noise>;
-  function clear(): Promise<Noise>;
+  function submit(): webdriver.Promise<Noise>;
+  function clear(): webdriver.Promise<Noise>;
 
-  function isDisplayed(): Promise<Bool>;
-  function getOuterHtml(): Promise<String>;
+  function isDisplayed(): webdriver.Promise<Bool>;
+  function getOuterHtml(): webdriver.Promise<String>;
 
-  function getInnerHtml(): Promise<String>;
+  function getInnerHtml(): webdriver.Promise<String>;
   
-  static function equals(a: WebElement, b: WebElement): Promise<Bool>;
+  static function equals(a: WebElement, b: WebElement): webdriver.Promise<Bool>;
 
 }
