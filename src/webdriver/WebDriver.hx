@@ -12,29 +12,29 @@ extern interface WebDriver {
 
   //function getSession(): Promise<Session>;
 
-  function quit(): Promise<Noise>;
+  function quit(): webdriver.Promise<Noise>;
 
   //function actions(): ActionSequence;
-  function executeScript<T>(script:String): Promise<T>;
+  function executeScript<T>(script:String): webdriver.Promise<T>;
   
-  function sleep(ms:Int):Promise<Noise>;
-  function getPageSource(): Promise<String>;
-  function close(): Promise<Noise>;
-  function get(url: String): Promise<Noise>;
-  function getCurrentUrl(): Promise<String>;
-  function getTitle(): Promise<String>;
+  function sleep(ms:Int):webdriver.Promise<Noise>;
+  function getPageSource(): webdriver.Promise<String>;
+  function close(): webdriver.Promise<Noise>;
+  function get(url: String): webdriver.Promise<Noise>;
+  function getCurrentUrl(): webdriver.Promise<String>;
+  function getTitle(): webdriver.Promise<String>;
   function findElement(locator:Locator): WebElementPromise;
-  function isElementPresent(locator:Locator): Promise<Bool>;
-  function findElements(locator:Locator): Promise<Array<WebElement>>;
-  function takeScreenshot(): Promise<String>;
+  function isElementPresent(locator:Locator): webdriver.Promise<Bool>;
+  function findElements(locator:Locator): webdriver.Promise<Array<WebElement>>;
+  function takeScreenshot(): webdriver.Promise<String>;
   function switchTo(): SwitchTo;
-  function getAllWindowHandles(): Promise<Array<WindowHandle>>;
-  function wait(cond:Dynamic): Promise<Dynamic>;
-  function getSession(): Promise<Session>;
+  function getAllWindowHandles(): webdriver.Promise<Array<WindowHandle>>;
+  function wait(cond:Dynamic): webdriver.Promise<Dynamic>;
+  function getSession(): webdriver.Promise<Session>;
 
 }
 
 @:remove
 extern interface SwitchTo {
-  function window( win: WindowHandle ): Promise<Noise>;
+  function window( win: WindowHandle ): webdriver.Promise<Noise>;
 }
