@@ -17,6 +17,6 @@
 	"version": "0.0.2",
 	"url": "http://github.com/back2dos/webdriver.js",
 	"dependencies": {
-		"tink_core": ""
+		"tink_core": "1.7.3"
 	}
 }
